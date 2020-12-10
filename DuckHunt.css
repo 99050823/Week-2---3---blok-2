@@ -1,0 +1,27 @@
+#container {
+    background-image: url("stage.png");
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+#duck {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+ 
+#miss {
+    float: right;
+    font-size: 30px;
+}
+
+#hit {
+    display: inline;
+    font-size: 30px;
+}
