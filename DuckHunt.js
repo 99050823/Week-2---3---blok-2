@@ -8,6 +8,7 @@ var missclick = document.getElementById("container");
 var duckclick = document.getElementById("duck");
 var hitscore = document.getElementById("hit");
 var missscore = document.getElementById("miss");
+var getal = 20;
 
 var hit = 0;
 var miss = 0;
@@ -20,9 +21,8 @@ function duckClicked (event) {
     hit++;
     hitscore.innerHTML = hit;
    
-
-    if (hit === 20){
-        alert("Gewonnen!");
+    if (hit+miss >= getal) {
+        alert("Aantal keer raak: " + hit + "\n" + "Aantal keer mis: " + miss + "\nGewonnen!");
     }
 
     event.stopPropagation();
@@ -33,8 +33,9 @@ function missClicked (event) {
     miss++;
     missscore.innerHTML = miss;
 
-    if (miss === 20) {
-        alert("Verloren!");
+   
+    if (hit+miss >= getal) {
+        alert("Aantal keer raak: " + hit + "\n" + "Aantal keer mis: " + miss + "\nVerloren!");
     }
 
     event.stopPropagation();
